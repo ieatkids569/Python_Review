@@ -1,11 +1,6 @@
 """
-Part 4.a
-Write a program that asks the user to enter a list of names then
-finds and prints the longest name in the list.
-"""
-
-
-"""
-Part 4.b
-Edit the above code so that it uses list Comprehension 
+Part 4
+Write a program that simulates a phone book using a dictionary.
+The program should allow the user to add new contacts,
+look up existing contacts, and delete contacts.
 """

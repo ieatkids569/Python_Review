@@ -1,14 +1,22 @@
 """
 Part 3
-Write code that asks the user to enter numbers and them to a list only if the numbers are positive.
+Write code that takes a string and prints out a dictionary
+where the keys are the words in the string and the values
+are the frequency of those words.
 """
+text = "I be flying high shawty I be flying high I be flying high shawty I be flying high I be flying high shawty I be flying high"
 
-# create an empty list to store the numbers
-# start a while loop
-    # get a number from the user
-    # check if the entered number and that it is positive
-    # then add it to the list(what data type should the number be?)
+#split the word into a list of words (use space as delimeter)
 
-    # if nothing is entered stop the loop
+#create an empty dictionary to hold the word count
 
-# print out the list of positive number
+#start looping through the word list
+
+    #check that the word is not already in the dictionary
+
+        #if it is not add it to the dictionary with a count value of 1
+
+    #else
+        #just add to 1 to the current count value of the word
+
+#print out the dictionary

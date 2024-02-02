@@ -1,10 +1,20 @@
-# Python Review: Lists
-In Python lists are power full datastructures. They can store multiple pieces of data in one variable
+# Python Review: Dictionaries
+In Python Dictionaries are also powerfull datastructures. Like lists, they also store multiple pieces of data in one variable, but they use key-value pairing instead of indexing to keep track of their elements.
 ## Objective
 
 
-1. Understand the correct syntax of lists
-2. Create, populate and mutate lists
+1. Key-Value Pairing
+2. Syntax (create, access, update, delete)
+3. Dictionary methods
+4. Working on Dictionaries
+5. Nesting
+
+
+
+
+
+
+
 
 ---
 ## Git Commands Cheat Sheet

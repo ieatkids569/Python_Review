@@ -1,21 +1,18 @@
 """
 Part 2
-The following code asks the user to enter names and saves them in a list.
-Fill in the blanks so that it filters out the names that start with a vowel.
+The following code will go through the contacts data and
+prints out all the users if their
+phone number starts with an even number. Fill in the blank
 """
 
-names = []
-while True:
-    answer = input("Enter a name: ")
-    if answer != "":
-        names.append(answer)
-    else:
-        break
-print(names)
+contacts = {
+    'Jonny': '333-4444',
+    'Sean': '222-5555',
+    'Todd': '122-3434',
+    'Sam': '410-5555',
+    'Laura': '555-2342'
+}
 
-filtered_names = []
-for name in _______:
-    if ________:
-        filtered_names.append(name)
-
-print(filtered_names)
+for key, value in _______________:
+    if __________ % ______ == 0:
+        print(f'Name: {key} Phone: {value}')
