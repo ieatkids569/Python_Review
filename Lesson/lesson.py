@@ -1,141 +1,163 @@
 print("--- Python Functions ----")
 
-#defining a funciton
+class Bookbag:
+    def __init__(self):
+        self.books = []
+        self.laptop = None
+        self.random = []
 
-def print_hello():
-    print("__________________")
-    print("___Hello World____")
-    print("__________________")
+    def add_book(self, book):
+        self.books.append(book)
 
-#calling a function
-print_hello()
+    def add_laptop(self, laptop):
+        self.laptop = laptop
 
-
-
-
-#single argument
-def greeting(name):
-    print("__________________")
-    print(f"___Hello {name}___")
-    print("__________________")
-
-
-
-
-
-#get a name from the user and pass it to the function
-
-
-#multiple arguments
-def hello_x(x, name):
-    for i in range(x):
-        print(f'Hello {name}')
-
-
-
-
-
-#arbitrary Arguments
-def greetings(*names):
-    for name in names:
-        print(f'Hello {name}')
-
-
-
-
-
-
-#keyword Arguments
-def create_account(name, email, password1, password2):
-    if password1 == password2:
-        new_user = {
-            "name": name,
-            "email": email,
-            "password": password1
+    def add_items(self, items):
+        if len(items) > 0:
+             self.random.append(items)
+    def get_items(self):
+        items = {
+            "books": self.books,
+            "laptop": self.laptop,
+            "random": self.random
         }
-    print(f'New user created\n {new_user}')
+        return items
+
+#create code to create bookbags for three people and ask users to add items
+
+
+#test the methods
+
+
+import random
+class User:
+    users = []
+    def __init__(self, **kwargs):
+        self.id = random.randint(1000, 9999)
+        self.first_name = kwargs.get('first_name', '')
+        self.last_name = kwargs.get('last_name', '')
+        self.email = kwargs.get('email', '')
+        self.password = kwargs.get('password', '')
+
+        # Add the user to the class variable
+        User.all_users.append(self)
+
+        def __str__(self):
+            return f"User: {self.name}, Email: {self.email}"
+
+        @classmethod
+        def get_all_users(cls):
+            return cls.all_users
+
+# Example usage
+user1 = User(first_name="Johnny", last_name="Bravo", email="jbravo@email.com", password="al0D12")
+user2 = User(first_name="Baily", last_name="Smith", email="bsmith@email.com", password="93nd7ee")
 
 
 
 
-
-
-#Arbitrary Keyword Arguments
-
-def create_arbt_account(**user_info):
-    if "password1" in user_info:
-        new_user = {}
-        for key, value in user_info.items():
-            new_user.update({key: value})
-        print(f'New user created\n{new_user}')
+#Create a class to hold data of different schools
+#for school registry database
 
 
 
 
+#Create a class to hold course information
+#for Brakebills University database
 
 
 
-#default Argument Value
-def greeting_email(name="Employee", message="Welcome to the company!"):
-    print(f'Dear {name},\n')
-    print(message)
-    print('_____________________________\n\n\n')
+#Inheritance
+class Human:
+    """
+    Represents a human with a name and birthdate.
+
+    Attributes:
+        name (str): The name of the human.
+        bday (str): The birthdate of the human in the format 'YYYY-MM-DD'.
+    """
+
+    def __init__(self, name, bday):
+        """
+        Initializes a new instance of the Human class.
+
+        Args:
+            name (str): The name of the human.
+            bday (str): The birthdate of the human in the format 'YYYY-MM-DD'.
+        """
+        self.name = name
+        self.bday = bday
+
+    def greet(self):
+        """
+        Prints a greeting message.
+
+        Returns:
+            str: A greeting message.
+        """
+        return f"Hello, my name is {self.name}."
+
+class Student(Human):
+    """
+    Represents a student, inheriting from the Human class.
+
+    Attributes:
+        student_id (int): The student ID of the student.
+    """
+
+    def __init__(self, name, bday, student_id):
+        """
+        Initializes a new instance of the Student class.
+
+        Args:
+            name (str): The name of the student.
+            bday (str): The birthdate of the student in the format 'YYYY-MM-DD'.
+            student_id (int): The student ID of the student.
+        """
+        super().__init__(name, bday)
+        self.student_id = student_id
+
+    def study(self):
+        """
+        Prints a message indicating that the student is studying.
+
+        Returns:
+            str: A message indicating that the student is studying.
+        """
+        return f"{self.name} is studying hard."
+
+# Examples of how to use the classes
+human = Human(name="John Doe", bday="1990-05-15")
+print(human.greet())  # Output: Hello, my name is John Doe.
+
+student = Student(name="Alice", bday="1995-08-22", student_id=12345)
+print(student.greet())  # Output: Hello, my name is Alice.
+print(student.study())  # Output: Alice is studying hard.
 
 
 
-#Return Arguments
+#Polymorphism
+class Dog:
+    def speak(self):
+        return "Woof!"
 
-def quadratic(a, b, c):
-    x1 = (-b + ((b**2 - 4*a*c)**0.5))/(2*a)
-    x2 = (-b - ((b**2 - 4*a*c)**0.5))/(2*a)
-    solutions = [x1, x2]
+class Cat:
+    def speak(self):
+        return "Meow!"
 
-    return solutions
+class Parrot:
+    def speak(self):
+        return "Squawk!"
 
+def animal_sound(animal):
+    return animal.speak()
 
+# Examples
+dog = Dog()
+cat = Cat()
+parrot = Parrot()
 
+print(animal_sound(dog))    # Output: Woof!
+print(animal_sound(cat))    # Output: Meow!
+print(animal_sound(parrot))  # Output: Squawk!
 
-
-#Lambda Functions
-def add_n(n):
-    return lambda a: a+n
-
-add_10 = add_n(10)
-print(f'5 + 10 = {add_10(5)}')
-
-add_31 = add_n(31)
-print(f'4 + 10 = {add_31(4)}')
-
-
-#Create a function called n_multiplier that takes a number n as input and returns a function that takes a number x as input and returns x*n using lambda functions
-
-
-
-
-
-#Create a function that will sort a list of lists based on the second element the inner lists.
-pairs = [(1, 'one'), (2, 'two'), (3, 'three'), (4, 'four')]
-
-
-#Should Output: [(4, 'four'), (1, 'one'), (3, 'three'), (2, 'two')]
-
-
-
-#Decorators
-import time
-def run_time_counter(func):
-    def wrapper(a, b, c):
-        start = time.time()
-        func(a, b, c)
-        end = time.time()
-        print(f'Run Time: {end - start} sec')
-    return wrapper
-
-@run_time_counter
-def timed_quadratic(a, b, c):
-    x1 = (-b + ((b**2 - 4*a*c)**0.5))/(2*a)
-    x2 = (-b - ((b**2 - 4*a*c)**0.5))/(2*a)
-    solutions = [x1, x2]
-    print(f'x1: {x1}, x2: {x2}, solutions: {solutions}')
-
-timed_quadratic(12, 4, 7)

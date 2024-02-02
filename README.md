@@ -1,13 +1,15 @@
-# Python Review: Functions
-A function simply is a block of code which only runs when it is called.
+# Python Review: Object Oriented Programming
+A class structures our code and save it as a blueprint. It is the basis for object oriented programming. 
 ## Objective
 
 
-1. Function syntax
-2. Function Arguments
-3. Lambda Functions
-4. Decorator Functions
-5. Function Metadata
+1. Object Oriented Programing
+2. Encapsulation 
+   1. Syntax for defining classes
+   2. Using classes
+3. Inheritance
+4. Polymorphism
+
 
 
 
