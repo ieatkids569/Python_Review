@@ -1,14 +1,12 @@
-# Unit One - Python Review
-Welcome to the Python Review unit of our Machine Learning course! This unit covers essential Python concepts to strengthen your foundation in programming.
-## Topics Covered
+# Python Review: Lists
+In Python lists are power full datastructures. They can store multiple pieces of data in one variable
+## Objective
 
-1. **Python Lists**: Learn to work with ordered collections.
-2. **Dictionaries**: Explore key-value pairs and efficient data retrieval.
-3. **Functions**: Understand the power of modular and reusable code.
-4. **Classes & Objects**: Dive into object-oriented programming principles.
-5. **Modules**: Organize your code into reusable and shareable components.
-6. **Files**: Master file handling and input/output operations.
 
+1. Understand the correct syntax of lists
+2. Create, populate and mutate lists
+
+---
 ## Git Commands Cheat Sheet
 ### Clone Repository
 ```bash
