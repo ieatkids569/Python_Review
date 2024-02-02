@@ -1,22 +1,28 @@
 """
 Part 3
-Write code that takes a string and prints out a dictionary
-where the keys are the words in the string and the values
-are the frequency of those words.
+Write a function, grade_calculator, that takes a list of tuples with (grade, weight) pairs
+then calculates and returns the average of weighted grades.
+
+example(800,1000) ⇒ 80%
+[(900, 1000), (45, 50), (350, 400)] ⇒ [90% , 90%, 87.5%]
+ave = (90 + 90 + 87.5) / 3 = 89.16 %
+
 """
-text = "I be flying high shawty I be flying high I be flying high shawty I be flying high I be flying high shawty I be flying high"
 
-#split the word into a list of words (use space as delimeter)
+#Define the funciton
+    #create a variable to store the total sum of the weighted grades (set it to 0)
 
-#create an empty dictionary to hold the word count
+    #loop through the list and get both the grades and weights
+        #devide the grade with the weight and add it to the total sum of the weighted grades
 
-#start looping through the word list
+    #calculate the average and presented as a percentage
+    #(use the length of the list to determin the total number of grade for the average)
 
-    #check that the word is not already in the dictionary
+    #return the value as a formated string
 
-        #if it is not add it to the dictionary with a count value of 1
+# Test
+example1 = grade_calculator([(800, 1000)])
+example2 = grade_calculator([(900, 1000), (45, 50), (350, 400)])
 
-    #else
-        #just add to 1 to the current count value of the word
-
-#print out the dictionary
+print(f"Example 1: {example1}")
+print(f"Example 2: {example2}")

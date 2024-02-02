@@ -1,13 +1,13 @@
-# Python Review: Dictionaries
-In Python Dictionaries are also powerfull datastructures. Like lists, they also store multiple pieces of data in one variable, but they use key-value pairing instead of indexing to keep track of their elements.
+# Python Review: Functions
+A function simply is a block of code which only runs when it is called.
 ## Objective
 
 
-1. Key-Value Pairing
-2. Syntax (create, access, update, delete)
-3. Dictionary methods
-4. Working on Dictionaries
-5. Nesting
+1. Function syntax
+2. Function Arguments
+3. Lambda Functions
+4. Decorator Functions
+5. Function Metadata
 
 
 

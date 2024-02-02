@@ -1,9 +1,6 @@
 # Part 1
 # What does the following code do? Add a comment to each line of code
 
-from datetime import datetime
-from datetime import timedelta
-
 geo_xy = {
     'Baltimore': {'lat': 39.2904, 'lon': -76.6122},
     'Addis Ababa': {'lat': 9.0192, 'lon': 38.7525},
@@ -14,15 +11,13 @@ geo_xy = {
     'Honolulu': {'lat': 21.3099, 'lon': -157.8581},
 }
 
-city = input(f'Pick a city {[city for city in geo_xy.keys()]}\n: ')
+sort_category = input(f'Pick a category to sort the geo data\n("city", "lat", or "lon")\n: ')
 
-if city in geo_xy:
-    offset = geo_xy[city]['lon'] // 15
-    print(offset)
-    if offset > -12 or offset < 12:
-        offset = offset - 12
-    local_time = datetime.utcnow() + timedelta(hours=offset)
+sorted_data = list(geo_xy.items())
+print(sorted_data)
 
-    print(f'Local time in {city}: {local_time.strftime("%H:%M:%S")}')
-else:
-    print(f"No location data for {city}! Try Again!")
+sorted_data.sort(key=lambda x: x[1][sort_category] if sort_category != 'city' else x[0])
+
+result = dict(sorted_data)
+
+print(result)
