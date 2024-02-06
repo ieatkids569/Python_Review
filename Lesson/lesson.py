@@ -40,20 +40,21 @@ class User:
         self.password = kwargs.get('password', '')
 
         # Add the user to the class variable
-        User.all_users.append(self)
+        User.users.append(self)
 
-        def __str__(self):
-            return f"User: {self.name}, Email: {self.email}"
+    def __str__(self):
+        return f"User: {self.first_name}, Email: {self.email}"
 
-        @classmethod
-        def get_all_users(cls):
-            return cls.all_users
+    @classmethod
+    def get_all_users(cls):
+        return cls.all_users
 
 # Example usage
 user1 = User(first_name="Johnny", last_name="Bravo", email="jbravo@email.com", password="al0D12")
 user2 = User(first_name="Baily", last_name="Smith", email="bsmith@email.com", password="93nd7ee")
 
-
+print(user1)
+print(user2)
 
 
 #Create a class to hold data of different schools
