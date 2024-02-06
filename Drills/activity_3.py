@@ -1,8 +1,7 @@
 """
 Part 3
-Create a class called Product that represents a product on an online shop.
-It should have attributes SKU, name, price, and quantity.
-It should also have two functions: buy() and apply_discount().
-The buy() method should change the product quantity by the amount passed through it
-but only if the product quantity is more or equal to the quantity the customer is trying to buy.
+Scrapes data from The Met Museum api (https://metmuseum.github.io/) (https://collectionapi.metmuseum.org/public/collection/v1)
+Figure out how the data is structured then create code that asks the user to enter a search text
+and grabs objects matching the search term. Using the objectIDs get more info about the pieces (object ID, title, Artist Name,and Image URL
+and save the results into a json file
 """

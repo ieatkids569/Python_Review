@@ -1,14 +1,14 @@
-# Python Review: Object Oriented Programming
-A class structures our code and save it as a blueprint. It is the basis for object oriented programming. 
+# Python Review: Modules
+Are libraries of code
+A file containing a set of functions and classes you want to include in your application
+In a way it is like a variable containing a code file
 ## Objective
 
 
-1. Object Oriented Programing
-2. Encapsulation 
-   1. Syntax for defining classes
-   2. Using classes
-3. Inheritance
-4. Polymorphism
+1. Creating, importing, and  using modules
+2. Python virtual  environment
+3. JSON Module
+4. Requests Module
 
 
 

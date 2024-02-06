@@ -1,7 +1,6 @@
 """
 Part 2
-Create a class called BankAccount that represents a bank account.
-It should have attributes for the account number, balance, and account holder name.
-It should also have methods to withdraw and deposit money, and a method to print the account information.
-
+Scrapes data from an anime api (https://api.jikan.moe/v4/anime)
+Figure out how the data is structured then create code that saves the id, title, and url
+of each anime in the api to a json file
 """
