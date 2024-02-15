@@ -12,3 +12,17 @@ Write code that asks the user to enter numbers and them to a list only if the nu
     # if nothing is entered stop the loop
 
 # print out the list of positive number
+
+numbers = []
+while True:
+   num = input("enter a number")
+   if num > "0":
+         numbers.append(int(num))
+   else:
+       break
+
+       print(numbers)
+
+
+
+
